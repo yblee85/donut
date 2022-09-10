@@ -4,7 +4,12 @@
 #include <time.h>
 #include <stdlib.h>
 
-enum {SECS_TO_SLEEP = 0, NSEC_TO_SLEEP = 10};
+enum {
+    SECS_TO_SLEEP = 0,
+    NSEC_TO_SLEEP = 6000000,
+    // NSEC_TO_SLEEP = 16667*4
+    // NSEC_TO_SLEEP = 10
+    };
 
 int main() {
     struct timespec remaining, request = {SECS_TO_SLEEP, NSEC_TO_SLEEP};
@@ -14,12 +19,15 @@ int main() {
     float z[1760];
     char b[1760];
     printf("\x1b[2J");
-    for(;;) {
+    for (;;) {
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
         system("cls");
-        memset(b,32,1760);
-        memset(z,0,7040);
-        for(j=0; j < 6.28; j += 0.07) {
-            for(i=0; i < 6.28; i += 0.02) {
+#else
+#endif
+        memset(b, 32, 1760);
+        memset(z, 0, 7040);
+        for (j=0; j < 6.28; j += 0.07) {
+            for (i=0; i < 6.28; i += 0.02) {
                 float c = sin(i);
                 float d = cos(j);
                 float e = sin(A);
@@ -32,21 +40,24 @@ int main() {
                 float n = sin(B);
                 float t = c * h * g - f * e;
                 int x = 40 + 30 * D * (l * h * m - t * n);
-                int y= 12 + 15 * D * (l * h * n + t * m);
+                int y = 12 + 15 * D * (l * h * n + t * m);
                 int o = x + 80 * y;
-                int N = 8 * ((f * e - c * d * g) * m - c * d * e - f * g - l * d * n);
-                if(22 > y && y > 0 && x > 0 && 80 > x && D > z[o]) {
+                int N =
+                8 * ((f * e - c * d * g) * m - c * d * e - f * g - l * d * n);
+                if (22 > y && y > 0 && x > 0 && 80 > x && D > z[o]) {
                     z[o] = D;
                     b[o] = ".,-~:;=!*#$@"[N > 0 ? N : 0];
                 }
             }
         }
         printf("\x1b[H");
-        for(k = 0; k < 1761; k++) {
+        for (k = 0; k < 1761; k++) {
             putchar(k % 80 ? b[k] : 10);
-            A += 0.00004;
-            B += 0.00002;
+            // A += 0.00004;
+            // B += 0.00002;
         }
+        A += 0.00004*1761;
+        B += 0.00002*1761;
         nanosleep(&request, &remaining);
     }
     return 0;
