@@ -7,8 +7,6 @@
 enum {
     SECS_TO_SLEEP = 0,
     NSEC_TO_SLEEP = 6000000,
-    // NSEC_TO_SLEEP = 16667*4
-    // NSEC_TO_SLEEP = 10
     };
 
 int main() {
@@ -53,8 +51,6 @@ int main() {
         printf("\x1b[H");
         for (k = 0; k < 1761; k++) {
             putchar(k % 80 ? b[k] : 10);
-            // A += 0.00004;
-            // B += 0.00002;
         }
         A += 0.00004*1761;
         B += 0.00002*1761;
