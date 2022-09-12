@@ -21,16 +21,32 @@
 
 # Getting started 
 
+
 1. 터미널에서 `src/donut.c` 파일을 빌드
 
+## Windows
 ```
 $ gcc -o donut src/donut.c
 ```
 
-1. 그럼 `donut.exe` 이 생성될거에요
+## Linux/MacOS
+```
+$ gcc -o donut src/donut.c -lm
+```
 
-1. 터미널에서 `donut.exe`를 실행
+2. 실행 파일이 생성
 
+  - `donut.exe` (Windows)
+  - `donut` (linux/MacOS)
+
+3. 터미널에서 파일 실행
+
+## Windows
 ```
 $ ./donut.exe
+```
+
+## Linux/MacOS
+```
+$ ./donut
 ```
