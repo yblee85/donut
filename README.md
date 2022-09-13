@@ -18,6 +18,7 @@
 # Prerequisite (필요한거)
 
 - gcc
+
 (optional )
 - cmake
 -  make
@@ -40,15 +41,15 @@ $ ./donut.exe
 ```
 
 (Optional)
-1. 터미널에서 cmake를 입력
-```
+- 터미널에서 cmake를 입력
+ ```
 cmake CmakeList.txt
-```
-1. make 실행
-```
+ ```
+- make 실행
+ ```
 make
-```
-1. 실행파일
-```
+ ```
+- 실행파일
+ ```
 ./src/donut
-```
+ ```
