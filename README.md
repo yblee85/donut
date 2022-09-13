@@ -18,6 +18,8 @@
 # Prerequisite (필요한거)
 
 - gcc
+  - windows : Mingw 필요 [다운로드 링크](https://www.mingw-w64.org/)
+  - linux/mac os : standard package install `gcc`
 
 # Getting started 
 
