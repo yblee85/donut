@@ -3,6 +3,7 @@
 #include <math.h>
 #include <time.h>
 #include <stdlib.h>
+#include "defstr.h"
 
 enum {
     SECS_TO_SLEEP = 0,
@@ -16,7 +17,8 @@ int main() {
     int k;
     float z[1760];
     char b[1760];
-    printf("\x1b[2J");
+    // printf("\x1b[2J");
+    printf("%s", ANSI_CLEAR_SCREEN);
     for (;;) {
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
         system("cls");
@@ -48,7 +50,8 @@ int main() {
                 }
             }
         }
-        printf("\x1b[H");
+        // printf("\x1b[H");
+        printf("%s",ANSI_MOVE_HOME);
         for (k = 0; k < 1761; k++) {
             putchar(k % 80 ? b[k] : 10);
         }
