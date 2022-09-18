@@ -17,7 +17,6 @@ int main() {
     int k;
     float z[1760];
     char b[1760];
-    // printf("\x1b[2J");
     printf("%s", ANSI_CLEAR_SCREEN);
     for (;;) {
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
@@ -50,8 +49,7 @@ int main() {
                 }
             }
         }
-        // printf("\x1b[H");
-        printf("%s",ANSI_MOVE_HOME);
+        printf("%s", ANSI_MOVE_HOME);
         for (k = 0; k < 1761; k++) {
             putchar(k % 80 ? b[k] : 10);
         }
