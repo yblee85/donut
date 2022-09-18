@@ -3,6 +3,7 @@ SET(prj_name "donut")
 project(${prj_name} VERSION 0.1.0)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
+include_directories(./include)
 
 
 add_subdirectory(src)
