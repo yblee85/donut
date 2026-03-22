@@ -6,13 +6,13 @@
 
 ## English
 
-Inspired by one of `Joma Tech` [youtube vieo](https://youtu.be/sW9npZVpiMI). I found it interesting and had urge to try it.
+Inspired by a [Joma Tech YouTube video](https://youtu.be/sW9npZVpiMI). I found it interesting and wanted to try it myself.
 
-`Andy Sloan` was the original creatior of donut. [Blog post](https://www.a1k0n.net/2011/07/20/donut-math.html)
+This is originally [Andy Sloane](https://www.a1k0n.net/)'s work; the math and code walkthrough are in his [blog post](https://www.a1k0n.net/2011/07/20/donut-math.html).
 
-Few functions didn't work because those libraries no longer exists, so had to replace them with newer functions.
+Some of the original code no longer built cleanly because its libraries and APIs were outdated, so I replaced those parts with supported equivalents.
 
-All the credit goes to 2 above.
+Credit goes to both sources above.
 
 ## Korean
 
