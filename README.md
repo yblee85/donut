@@ -2,8 +2,19 @@
 
 ![image](https://user-images.githubusercontent.com/1134397/189466661-e8aa5fff-0ad6-484c-9659-cf82bff8b37d.png)
 
-
 # Overview
+
+## English
+
+Inspired by one of `Joma Tech` [youtube vieo](https://youtu.be/sW9npZVpiMI). I found it interesting and had urge to try it.
+
+`Andy Sloan` was the original creatior of donut. [Blog post](https://www.a1k0n.net/2011/07/20/donut-math.html)
+
+Few functions didn't work because those libraries no longer exists, so had to replace them with newer functions.
+
+All the credit goes to 2 above.
+
+## Korean
 
 얼마전에 [유튜브 비디오](https://youtu.be/sW9npZVpiMI) 보다가 재밌기도 하고 궁금 하기도 해서 한번 따라해 본거에요.
 
@@ -15,10 +26,10 @@
 
 모든 Credit 은 원본 코드 만드신 분께 가요.
 
-# Prerequisite (필요한거)
+# Prerequisite
 
 - gcc
-  - windows : Mingw 필요 [다운로드 링크](https://www.mingw-w64.org/)
+  - windows : Mingw [download](https://www.mingw-w64.org/)
   - linux/mac os : standard package install `gcc`
 
 (optional )
@@ -29,9 +40,9 @@
 # Getting started 
 
 
-1. 터미널에서 `src/donut.c` 파일을 빌드
+1. Build `src/donut.c`
 
-## Option 1. gcc (OS 마다 방법이 조금 다름)
+## Option 1. gcc
 ### Windows
 ```
 $ gcc -o donut src/donut.c
@@ -43,25 +54,23 @@ $ gcc -o donut src/donut.c
 $ gcc -o donut src/donut.c -lm
 ```
 
-## Opton 2. make (아무 OS나 사용 가능)
+## Opton 2. make
 
-- 터미널에서 cmake를 입력
+- run cmake
  ```
 $ cmake CmakeList.txt
  ```
 
-- make 실행
+- run make then you will see executables
  ```
 $ make
 ```
-
-2. 실행 파일이 생성
 
   - `donut.exe` (Windows)
   - `donut` (linux/MacOS)
 
 
-3. 터미널에서 파일 실행
+3. run the executable
 
 ## Windows
 ```
