@@ -1,6 +1,6 @@
 # Have a donut :D
 
-![image](https://user-images.githubusercontent.com/1134397/189466661-e8aa5fff-0ad6-484c-9659-cf82bff8b37d.png)
+![donut](public/donut.gif)
 
 # Overview
 
@@ -28,57 +28,45 @@ All the credit goes to 2 above.
 
 # Prerequisite
 
-- gcc
-  - windows : Mingw [download](https://www.mingw-w64.org/)
-  - linux/mac os : standard package install `gcc`
-
-(optional )
 - cmake
--  make
+- make
 
 
-# Getting started 
+# Getting started
 
+The CMake project compiles `src/donut.c` (and links `libm`) into an executable named like the project: `donut` on Unix, `donut.exe` on Windows. From the **repository root**:
 
-1. Build `src/donut.c`
+1. **Configure** — generates `Makefile` (and related files) from `CMakeLists.txt`:
 
-## Option 1. gcc
+   ```bash
+   cmake .
+   ```
+
+2. **Build** — compile and link:
+
+   ```bash
+   make
+   ```
+
+   Or run `./build.sh`, which runs `cmake .` then `make`.
+
+Alternatively, without CMake:
+
+```bash
+gcc -Iinclude -o donut src/donut.c -lm
+```
+
+## Run the executable
+
 ### Windows
-```
-$ gcc -o donut src/donut.c
-```
 
-### Linux/MacOS
-
-```
-$ gcc -o donut src/donut.c -lm
+```bash
+./donut.exe
 ```
 
-## Opton 2. make
+### Linux / macOS
 
-- run cmake
- ```
-$ cmake CmakeList.txt
- ```
-
-- run make then you will see executables
- ```
-$ make
-```
-
-  - `donut.exe` (Windows)
-  - `donut` (linux/MacOS)
-
-
-3. run the executable
-
-## Windows
-```
-$ ./donut.exe
-```
-
-## Linux/MacOS
-```
-$ ./donut
+```bash
+./donut
 ```
 

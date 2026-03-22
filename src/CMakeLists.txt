@@ -10,5 +10,9 @@ set(PROJ_SRC ${headers} ${sources})
 
 add_executable(${BINARY} ${PROJ_SRC})
 
+if(NOT MSVC)
+    target_link_libraries(${BINARY} PRIVATE m)
+endif()
+
 #target_include_directories( ${LIB_BINARY} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

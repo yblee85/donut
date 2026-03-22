@@ -7,7 +7,7 @@
 
 enum {
     SECS_TO_SLEEP = 0,
-    NSEC_TO_SLEEP = 6000000,
+    NSEC_TO_SLEEP = 12000000,
     };
 
 int main() {
@@ -53,8 +53,8 @@ int main() {
         for (k = 0; k < 1761; k++) {
             putchar(k % 80 ? b[k] : 10);
         }
-        A += 0.00004*1761;
-        B += 0.00002*1761;
+        A += 0.00002*1761;
+        B += 0.00001*1761;
         nanosleep(&request, &remaining);
     }
     return 0;
